@@ -32,7 +32,7 @@ public class UserControllerTest {
     }
     @Test
     public void getUser() throws Exception {
-        String getUserUri = "/getUser";
+        String getUserUri = "/user/getUser";
         MvcResult mvcResult = this.mockMvc
                 .perform(get(getUserUri))
                 .andReturn();
@@ -40,10 +40,10 @@ public class UserControllerTest {
     }
     @Test
     public void saveUser() throws Exception {
-        MvcResult mvcResult = this.mockMvc.perform(post("/saveUser")
-                .param("name","")
+        MvcResult mvcResult = this.mockMvc.perform(post("/user/saveUser")
+                .param("name","的")
                 .param("age","666")
-                .param("passwor","test")).andReturn();
+                .param("password","test")).andReturn();
         System.out.println("User是：" + mvcResult.getResponse().getContentAsString());
     }
 }

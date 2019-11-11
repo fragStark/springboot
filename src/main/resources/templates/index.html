@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf示例</title>
+</head>
+<body>
+    <!--/*@thymesVar id="message" type="thymeleaf"*/-->
+    <h1 th:text="${message}">Hello World</h1>
+    <p th:text="'Welcome to ' + ${interface} ">我的界面</p>
+
+    <p th:if="${flag == 'yes'}" th:text="${interface}">界面名称</p>
+
+
+</body>
+</html>
