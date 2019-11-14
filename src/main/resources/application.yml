@@ -2,5 +2,20 @@ neo:
   title: \u7EAF\u6D01\u7684\u82CF\u9A70
   description: 123
 spring:
+  datasource:
+    one:
+      url: jdbc:mysql://localhost:3306/school?useSSL=false&serverTimezone=GMT%2B8
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    two:
+      url: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=GMT%2B8
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
   thymeleaf:
     cache: false
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.avic.zemic.first.model

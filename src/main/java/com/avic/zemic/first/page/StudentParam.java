@@ -1,34 +1,23 @@
-package com.avic.zemic.first.model;
+package com.avic.zemic.first.page;
 
-public class Student {
-    private Long studentId;
+public class StudentParam extends PageParam {
     private String studentName;
     private Integer studentAge;
 
     @Override
     public String toString() {
-        return "Student{" +
-                "studentId=" + studentId +
-                ", studentName='" + studentName + '\'' +
-                ", studentAge=" + studentAge +
+        return "StudentParam{" +
+                "studentName='" + studentName + '\'' +
+                ", studentAge='" + studentAge + '\'' +
                 '}';
     }
 
-    public Student() {
+    public StudentParam() {
     }
 
-    public Student(Long studentId, String studentName, Integer studentAge) {
-        this.studentId = studentId;
+    public StudentParam(String studentName, Integer studentAge) {
         this.studentName = studentName;
         this.studentAge = studentAge;
-    }
-
-    public Long getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentId(Long studentId) {
-        this.studentId = studentId;
     }
 
     public String getStudentName() {
